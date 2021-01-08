@@ -16,8 +16,9 @@ config.read('data/config.ini')
 
 def getSupply(cmc) -> int:
     
-    data = cmc.cryptocurrency_listings_latest(symbol='USDT').data
-
+    data = cmc.cryptocurrency_quotes_latest(symbol='USDT')
+    print(data)
+    exit()
     try:
         if int(data.get('status')) == 0:
             print(data.get('result'))

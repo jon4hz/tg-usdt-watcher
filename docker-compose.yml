@@ -1,0 +1,9 @@
+---
+version: '3.5'
+services:
+  python:
+    image: jon4hz/tg-usdt-watcher
+    container_name: tg-usdt-watcher
+    restart: unless-stopped
+    volumes:
+      - ./data:/usr/src/app/volume
